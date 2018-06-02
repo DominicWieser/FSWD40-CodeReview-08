@@ -12,7 +12,7 @@ export class FirebaseService{
 
   getUsers(gender: string = null) {
       /* for all output in select */
-      if (gender === 'all') {
+      if (gender == 'all') {
             this.users = this.af.list('/users') as FirebaseListObservable<Users[]>;
         }
       /* For Gender Selection */
